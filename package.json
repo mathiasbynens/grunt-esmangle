@@ -1,0 +1,52 @@
+{
+	"name": "grunt-esmangle",
+	"version": "0.1.0",
+	"description": "A Grunt plugin for mangling or minifying JavaScript files using esmangle",
+	"author": {
+		"name": "Mathias Bynens",
+		"web": "http://mathiasbynens.be/"
+	},
+	"homepage": "http://git.io/grunt-esmangle",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://mths.be/mit"
+		},
+		{
+			"type": "GPL",
+			"url": "http://mths.be/gpl"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/mathiasbynens/grunt-esmangle.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mathiasbynens/grunt-esmangle/issues"
+	},
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"test": "grunt test"
+	},
+	"dependencies": {
+		"escodegen": "~0.0.19",
+		"esmangle": "~0.0.11",
+		"esprima": "~1.0.2",
+		"grunt-lib-contrib": "~0.6.1"
+	},
+	"devDependencies": {
+		"grunt-contrib-clean": "~0.4.0",
+		"grunt-contrib-nodeunit": "~0.1.2",
+		"grunt": "~0.4.1"
+	},
+	"peerDependencies": {
+		"grunt": "~0.4.1"
+	},
+	"keywords": [
+		"gruntplugin",
+		"minify",
+		"mangle"
+	]
+}
