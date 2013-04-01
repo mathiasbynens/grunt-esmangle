@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 					mangledAST.tokens
 				);
 			}
-			var result = (banner || '') + escodegen.generate(mangledAST, options);
+			var result = banner + escodegen.generate(mangledAST, options);
 
 			minMax(result, src, 'gzip');
 
