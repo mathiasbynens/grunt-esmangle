@@ -7,12 +7,13 @@ module.exports = function(grunt) {
 	var minMax = require('grunt-lib-contrib').init(grunt).minMaxInfo;
 
 	grunt.registerMultiTask('esmangle', 'Mangle or minify JavaScript files with esmangle.', function() {
-		// https://github.com/Constellation/escodegen/blob/master/escodegen.js:
-		// → `getDefaultOptions()`
-		// Some of these settings are documented here:
-		// https://github.com/Constellation/escodegen/wiki/API
 		// Merge task-specific and/or target-specific options with these defaults:
 		var options = this.options({
+			'banner': '',
+			// https://github.com/Constellation/escodegen/blob/master/escodegen.js:
+			// → `getDefaultOptions()`
+			// Some of these settings are documented here:
+			// https://github.com/Constellation/escodegen/wiki/API
 			'format': {
 				'indent': {
 					'style': '',
@@ -35,6 +36,8 @@ module.exports = function(grunt) {
 			'sourceMapRoot': undefined,
 			'sourceMapWithCode': false
 		});
+
+		var banner = grunt.template.process(options.banner);
 
 		// Iterate over all specified file groups.
 		this.files.forEach(function(file) {
@@ -66,7 +69,7 @@ module.exports = function(grunt) {
 					mangledAST.tokens
 				);
 			}
-			var result = escodegen.generate(mangledAST, options);
+			var result = (banner || '') + escodegen.generate(mangledAST, options);
 
 			minMax(result, src, 'gzip');
 

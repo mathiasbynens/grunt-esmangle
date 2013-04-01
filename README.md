@@ -46,6 +46,18 @@ grunt.initConfig({
 
 The `options` property accepts all the available Escodegen options. See [the escodegen wiki](https://github.com/Constellation/escodegen/wiki/API) for an overview.
 
+There is also a `banner` option:
+
+#### `banner`
+Type: `String`
+Default: empty string
+
+This string will be prepended to the beginning of the mangled/minified output. It is processed using [`grunt.template.process`][], using the default options.
+
+_(Default processing options are explained in the [`grunt.template.process`][] documentation.)_
+
+[`grunt.template.process`]: https://github.com/gruntjs/grunt/wiki/grunt.template#wiki-grunt-template-process
+
 ### Usage example
 
 Here’s a practical example of grunt-esmangle:

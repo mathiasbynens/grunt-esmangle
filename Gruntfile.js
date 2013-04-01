@@ -6,6 +6,9 @@ module.exports = function(grunt) {
 			'tests': ['tmp'],
 		},
 
+		// This is used to test banner templating
+		'testValue': 'This is some license header comment',
+
 		// Configuration to be run and tested
 		'esmangle': {
 			'test-1': {
@@ -26,6 +29,14 @@ module.exports = function(grunt) {
 				'options': {},
 				'files': {
 					'tmp/advanced.js': ['tests/fixtures/advanced.js']
+				},
+			},
+			'test-4': {
+				'options': {
+					'banner': '/*! <%= testValue %> */'
+				},
+				'files': {
+					'tmp/advanced-with-banner.js': ['tests/fixtures/advanced.js']
 				},
 			}
 		},

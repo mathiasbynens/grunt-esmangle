@@ -1,0 +1,1 @@
+/*! This is some license header comment */!function(a,b){function c(e,f){var b,a,c,d;a=e.length,c=0;while(a)b=a>>>1,d=c+b,f(e[d])?a=b:(c=d+1,a-=b+1);return c;}a.LOL='a\v\t\n\r\blolwat',b=c([2,3,5,7,11,13,17,19,23,29,31,37],function(a){return a>25;});}(this);

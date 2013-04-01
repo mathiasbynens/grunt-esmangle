@@ -20,23 +20,44 @@ var grunt = require('grunt');
 		test.ifError(value)
 */
 
+var compare = function(inputFile, expectedOutputFile, description, test) {
+	var actual = grunt.file.read(inputFile);
+	var expected = grunt.file.read(expectedOutputFile);
+	test.equal(actual, expected, description);
+	test.done();
+};
+
 exports.esmangle = {
 	'simple': function(test) {
-		var actual = grunt.file.read('tmp/simple.js');
-		var expected = grunt.file.read('tests/expected/simple.js');
-		test.equal(actual, expected, 'Simple example with default settings');
-		test.done();
+		compare(
+			'tmp/simple.js',
+			'tests/expected/simple.js',
+			'Simple example with default settings',
+			test
+		);
 	},
 	'simple-with-comments': function(test) {
-		var actual = grunt.file.read('tmp/simple-with-comments.js');
-		var expected = grunt.file.read('tests/expected/simple-with-comments.js');
-		test.equal(actual, expected, 'Simple example with comments enabled');
-		test.done();
+		compare(
+			'tmp/simple-with-comments.js',
+			'tests/expected/simple-with-comments.js',
+			'Simple example with comments enabled',
+			test
+		);
 	},
 	'advanced': function(test) {
-		var actual = grunt.file.read('tmp/advanced.js');
-		var expected = grunt.file.read('tests/expected/advanced.js');
-		test.equal(actual, expected, 'Advanced example with default settings');
-		test.done();
+		compare(
+			'tmp/advanced.js',
+			'tests/expected/advanced.js',
+			'Advanced example with default settings',
+			test
+		);
 	},
+	'advanced-with-banner': function(test) {
+		compare(
+			'tmp/advanced-with-banner.js',
+			'tests/expected/advanced-with-banner.js',
+			'Advanced example with banner',
+			test
+		);
+	}
 };
