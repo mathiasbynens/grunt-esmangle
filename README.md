@@ -1,6 +1,6 @@
 # grunt-esmangle
 
-A Grunt plugin for mangling or minifying JavaScript files using [esmangle](http://constellation.github.com/esmangle/).
+A Grunt plugin for mangling or minifying JavaScript files using [Esmangle](http://constellation.github.com/esmangle/).
 
 ## Getting started
 
@@ -44,7 +44,7 @@ grunt.initConfig({
 
 ### Options
 
-The `options` property accepts all the available Escodegen options. See [the escodegen wiki](https://github.com/Constellation/escodegen/wiki/API) for an overview.
+The `options` property accepts all the available Escodegen options. See [the Escodegen wiki](https://github.com/Constellation/escodegen/wiki/API) for an overview.
 
 There is also a `banner` option:
 

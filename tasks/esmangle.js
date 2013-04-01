@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
 	var minMax = require('grunt-lib-contrib').init(grunt).minMaxInfo;
 
-	grunt.registerMultiTask('esmangle', 'Mangle or minify JavaScript files with esmangle.', function() {
+	grunt.registerMultiTask('esmangle', 'Mangle or minify JavaScript files with Esmangle.', function() {
 		// Merge task-specific and/or target-specific options with these defaults:
 		var options = this.options({
 			'banner': '',
