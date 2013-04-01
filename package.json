@@ -31,8 +31,8 @@
 		"test": "grunt test"
 	},
 	"dependencies": {
-		"escodegen": "~0.0.19",
-		"esmangle": "~0.0.11",
+		"escodegen": "~0.0.20",
+		"esmangle": "~0.0.12",
 		"esprima": "~1.0.2",
 		"grunt-lib-contrib": "~0.6.1"
 	},
