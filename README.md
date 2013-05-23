@@ -1,4 +1,4 @@
-# grunt-esmangle [![Dependency status](https://gemnasium.com/mathiasbynens/grunt-esmangle.png)](https://gemnasium.com/mathiasbynens/grunt-esmangle)
+# grunt-esmangle [![Build status](https://travis-ci.org/mathiasbynens/grunt-esmangle.png?branch=master)](https://travis-ci.org/mathiasbynens/grunt-esmangle) [![Dependency status](https://gemnasium.com/mathiasbynens/grunt-esmangle.png)](https://gemnasium.com/mathiasbynens/grunt-esmangle)
 
 A Grunt plugin for mangling or minifying JavaScript files using [Esmangle](http://constellation.github.com/esmangle/).
 
