@@ -1,8 +1,5 @@
 .*
 *.md
-node_modules/grunt
-node_modules/grunt-contrib-clean
-node_modules/grunt-contrib-nodeunit
 tests
 tmp
 Gruntfile.js
