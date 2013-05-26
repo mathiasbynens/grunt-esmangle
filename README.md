@@ -77,7 +77,7 @@ grunt.initConfig({
 			'files': {
 				'dist/all-plugins.min.js': ['js/plugins/*.js']
 			}
-		}
+		},
 		'minify-custom-scripts': {
 			'options': {
 				// Preserve comments
