@@ -4,7 +4,7 @@
 	"description": "A Grunt plugin for mangling or minifying JavaScript files using Esmangle",
 	"author": {
 		"name": "Mathias Bynens",
-		"web": "http://mathiasbynens.be/"
+		"url": "http://mathiasbynens.be/"
 	},
 	"homepage": "http://git.io/grunt-esmangle",
 	"licenses": [
