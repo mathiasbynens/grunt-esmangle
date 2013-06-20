@@ -26,7 +26,9 @@ module.exports = function(grunt) {
 				},
 			},
 			'test-3': {
-				'options': {},
+				'options': {
+					'report': false
+				},
 				'files': {
 					'tmp/advanced.js': ['tests/fixtures/advanced.js']
 				},

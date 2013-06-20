@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 		// Merge task-specific and/or target-specific options with these defaults:
 		var options = this.options({
 			'banner': '',
+			'report': 'gzip',
 			// https://github.com/Constellation/escodegen/blob/master/escodegen.js:
 			// → `getDefaultOptions()`
 			// Some of these settings are documented here:
@@ -71,7 +72,9 @@ module.exports = function(grunt) {
 			}
 			var result = banner + escodegen.generate(mangledAST, options);
 
-			minMax(result, src, 'gzip');
+			if (options.report) {
+				minMax(result, src, options.report);
+			}
 
 			// Write the destination file
 			grunt.file.write(file.dest, result);

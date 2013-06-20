@@ -46,7 +46,7 @@ grunt.initConfig({
 
 The `options` property accepts all the available Escodegen options. See [the Escodegen wiki](https://github.com/Constellation/escodegen/wiki/API) for an overview.
 
-There is also a `banner` option:
+Additionally, there are two Grunt-specific options:
 
 #### `banner`
 Type: `String`
@@ -57,6 +57,14 @@ This string will be prepended to the beginning of the mangled/minified output. I
 _(Default processing options are explained in the [`grunt.template.process`][] documentation.)_
 
 [`grunt.template.process`]: https://github.com/gruntjs/grunt/wiki/grunt.template#wiki-grunt-template-process
+
+#### `report`
+Choices: `false`, `'min'`, `'gzip'`
+Default: `false`
+
+Either do not report anything, report only minification result, or report minification and gzip results.
+
+**Important:** including `'gzip'` results can make this task 5-10× slower depending on the size of the file.
 
 ### Usage example
 
