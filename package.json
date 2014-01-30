@@ -31,18 +31,18 @@
 		"test": "grunt test"
 	},
 	"dependencies": {
-		"escodegen": "~0.0.23",
-		"esmangle": "~0.0.14",
-		"esprima": "~1.0.3",
+		"escodegen": "~1.1.0",
+		"esmangle": "~0.0.17",
+		"esprima": "~1.0.4",
 		"grunt-lib-contrib": "~0.6.1"
 	},
 	"devDependencies": {
-		"grunt-contrib-clean": "~0.4.1",
-		"grunt-contrib-nodeunit": "~0.2.0",
-		"grunt": "~0.4.1"
+		"grunt-contrib-clean": "~0.5.0",
+		"grunt-contrib-nodeunit": "~0.3.0",
+		"grunt": "~0.4.2"
 	},
 	"peerDependencies": {
-		"grunt": "~0.4.1"
+		"grunt": "~0.4.2"
 	},
 	"keywords": [
 		"gruntplugin",
