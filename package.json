@@ -1,6 +1,6 @@
 {
 	"name": "grunt-esmangle",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"description": "A Grunt plugin for mangling or minifying JavaScript files using Esmangle",
 	"author": {
 		"name": "Mathias Bynens",
