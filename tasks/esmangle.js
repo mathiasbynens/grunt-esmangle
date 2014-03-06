@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 			var result = banner + escodegen.generate(mangledAST, options);
 
 			if (options.report) {
-				grunt.log.writeln(maxMin(result, src, options.report));
+				grunt.log.writeln(maxMin(result, src, options.report == 'gzip'));
 			}
 
 			// Write the destination file
