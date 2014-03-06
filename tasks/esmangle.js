@@ -1,10 +1,9 @@
 var esprima = require('esprima');
 var esmangle = require('esmangle');
 var escodegen = require('escodegen');
+var maxMin = require('maxmin');
 
 module.exports = function(grunt) {
-
-	var minMax = require('grunt-lib-contrib').init(grunt).minMaxInfo;
 
 	grunt.registerMultiTask('esmangle', 'Mangle or minify JavaScript files with Esmangle.', function() {
 		// Merge task-specific and/or target-specific options with these defaults:
@@ -73,7 +72,7 @@ module.exports = function(grunt) {
 			var result = banner + escodegen.generate(mangledAST, options);
 
 			if (options.report) {
-				minMax(result, src, options.report);
+				grunt.log.writeln(maxMin(result, src, options.report));
 			}
 
 			// Write the destination file
