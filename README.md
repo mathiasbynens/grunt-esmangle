@@ -1,4 +1,4 @@
-# grunt-esmangle [![Build status](https://travis-ci.org/mathiasbynens/grunt-esmangle.png?branch=master)](https://travis-ci.org/mathiasbynens/grunt-esmangle) [![Dependency status](https://gemnasium.com/mathiasbynens/grunt-esmangle.png)](https://gemnasium.com/mathiasbynens/grunt-esmangle)
+# grunt-esmangle [![Build status](https://travis-ci.org/mathiasbynens/grunt-esmangle.svg?branch=master)](https://travis-ci.org/mathiasbynens/grunt-esmangle) [![Dependency status](https://gemnasium.com/mathiasbynens/grunt-esmangle.svg)](https://gemnasium.com/mathiasbynens/grunt-esmangle)
 
 A Grunt plugin for mangling or minifying JavaScript files using [Esmangle](http://constellation.github.com/esmangle/).
 
@@ -26,19 +26,19 @@ In your project’s Gruntfile, add a section named `esmangle` to the data object
 
 ```js
 grunt.initConfig({
-	'esmangle': {
-		'options': {
-			// Task-specific options go here
-		},
-		'your-target': {
-			'options': {
-				// Target-specific options go here
-			},
-			'files': {
-				// Target-specific file lists go here
-			}
-		}
-	}
+  'esmangle': {
+    'options': {
+      // Task-specific options go here
+    },
+    'your-target': {
+      'options': {
+        // Target-specific options go here
+      },
+      'files': {
+        // Target-specific file lists go here
+      }
+    }
+  }
 });
 ```
 
@@ -72,36 +72,36 @@ Here’s a practical example of grunt-esmangle:
 
 ```js
 grunt.initConfig({
-	'esmangle': {
-		'options': {
-			// Don’t preserve semicolons at the end of blocks and programs
-			'semicolons': false
-		},
-		'minify-plugins': {
-			'options': {
-				// Always use double quotes as string literal delimiter
-				'quotes': 'double'
-			},
-			'files': {
-				'dist/all-plugins.min.js': ['js/plugins/*.js']
-			}
-		},
-		'minify-custom-scripts': {
-			'options': {
-				// Preserve comments
-				'comment': true
-			},
-			'files': {
-				'dist/all-custom-scripts.min.js': ['js/custom-scripts/*.js']
-			}
-		}
-	}
+  'esmangle': {
+    'options': {
+      // Don’t preserve semicolons at the end of blocks and programs
+      'semicolons': false
+    },
+    'minify-plugins': {
+      'options': {
+        // Always use double quotes as string literal delimiter
+        'quotes': 'double'
+      },
+      'files': {
+        'dist/all-plugins.min.js': ['js/plugins/*.js']
+      }
+    },
+    'minify-custom-scripts': {
+      'options': {
+        // Preserve comments
+        'comment': true
+      },
+      'files': {
+        'dist/all-custom-scripts.min.js': ['js/custom-scripts/*.js']
+      }
+    }
+  }
 });
 ```
 
 ## Author
 
-| [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter") |
+| [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
 | [Mathias Bynens](http://mathiasbynens.be/) |
 
